@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user"> 
+     
+    <!--  user-00-1.회원가입 처리 -->
+     <insert id="insert" parameterType="userVo">
+     <![CDATA[
+     	  insert into users
+     	  values (seq_users_no.nextval,
+     	         #{id},
+     	         #{userName},
+     	         #{password},
+     	         sysdate
+     	  )
+     ]]>
+     </insert>
+
+	<!-- user-00-2.회원가입 - (ajax) 중복 아이디 체크 -->
+	<select id="selectUserByIdCheck" parameterType="string" resultType="int">
+	<![CDATA[
+		select count(*)
+		from users
+		where id=#{id}
+	]]>
+	</select>
+	
+	<!-- user-01&02. 로그인 시 id,pwd 불러옴 -> session에 넣을 예정 -->
+	<select id="selectUserByIdPw" parameterType="map" resultType="userVo">
+	<![CDATA[
+		select userNo, userName, id
+		from users
+		where id = #{id} and password = #{password}
+	]]>
+	</select>
+	
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="post"> 
+
+	<!-- post-01. 글작성 등록 -->
+	<!-- resultType:해당 컬럼의 타입 / keyProperty:컬럼명 / order는 해당 쿼리의 순서 의미 (BEFORE:insert쿼리 수행 전 selectKey 실행) -->
+	<insert id="insert" parameterType="postVo">
+     <![CDATA[
+     	  insert into post
+     	  values ( seq_post_no.nextval,
+     	           #{cateNo},
+     	           #{postTitle},
+     	           #{postContent},
+     	           sysdate
+     	         )
+     ]]>
+     </insert>
+
+</mapper>
