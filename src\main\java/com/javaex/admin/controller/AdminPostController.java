@@ -50,10 +50,12 @@ public class AdminPostController {
 	
 	//apc-01. 글작성 등록
 	@RequestMapping(value="/{id}/admin/write", method=RequestMethod.POST)
-	public String writesucess(@PathVariable("id") String id, @ModelAttribute PostVo postVo) {
+	public String writesucess(@PathVariable("id") String id, @ModelAttribute PostVo postVo, Model model) {
 		
 		//form에서 정보 받기
 		boolean result = postService.write(postVo);
+		System.out.println("postService result: " +result);
+		model.addAttribute("pVo", postVo);
 		
 		return "redirect:/"+id+"/admin/write";
 	}

@@ -46,7 +46,7 @@
 		      	<table id="admin-cat-add" >
 		      		<tr>
 		      			<td class="t"></td>
-		      			<td><input type="text" name="id" value="${bVo.id}"></td>
+		      			<td><input type="hidden" name="id" value="${bVo.id}"></td>
 		      		</tr>
 		      		<tr>
 		      			<td class="t">카테고리명</td>
@@ -92,8 +92,7 @@
 			} else  {
 				console.log("포스트가 없으니 삭제가능합니다.");
 			}
-			
-		
+			 
 		//acc-03.카테고리 삭제		
 		//카테고리 삭제 ajax
 		$.ajax({

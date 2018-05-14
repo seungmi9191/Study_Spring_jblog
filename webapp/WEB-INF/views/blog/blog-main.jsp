@@ -21,9 +21,9 @@
 		<div id="wrapper">
 			<div id="content">
 				<div class="blog-content">
-					<h4>제목</h4>
+					<h4>화면제목</h4>
 					<p>
-						등록된 글이 없습니다.
+						화면나오는거 적용해야함
 					</p>
 					
 					
@@ -31,23 +31,7 @@
 				
 				<ul class="blog-list">
 					<li>
-						<a href="">어벤져스: 인피니티 워</a> 
-						<span>18/05/04</span>
-					</li>
-					<li>
-						<a href="">챔피언</a> 
-						<span>18/05/04</span>
-					</li>
-					<li>
-						<a href="">그날, 바다</a> 
-						<span>18/05/04</span>
-					</li>
-					<li>
-						<a href="">원더스트럭</a> 
-						<span>18/05/04</span>
-					</li>
-					<li>
-						<a href="">렛 더 선샤인 인</a> 
+						<a href="">작업해야함</a> 
 						<span>18/05/04</span>
 					</li>
 				</ul>

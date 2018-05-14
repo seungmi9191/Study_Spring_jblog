@@ -34,7 +34,7 @@
 			      		<tr>
 			      			<td class="t">로고이미지</td>
 			      			<td><img src="${pageContext.request.contextPath}/upload/${bVo.logoFile}">
-			      				<input type="text" value="${bVo.logoFile}">
+			      				<%-- <input type="text" value="${bVo.logoFile}"> --%>
 			      			</td>   
 			      		</tr>      		
 			      		<tr>
