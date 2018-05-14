@@ -16,5 +16,17 @@
      	         )
      ]]>
      </insert>
+     
+    <!-- blog-00.블로그 홈 - 포스트 리스트 출력 -->
+    <select id="selectByPostList" parameterType="int" resultType="postVo">
+    <![CDATA[
+    	 select postNo, cateNo, postTitle, postContent, regDate
+		 from post
+		 where cateNo = #{cateNo}
+		 order by regDate desc
+    ]]>
+    </select>
+    
+    
 
 </mapper>

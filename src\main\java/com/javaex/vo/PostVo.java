@@ -44,7 +44,7 @@ public class PostVo {
 	public void setCateNo(int cateNo) {
 		this.cateNo = cateNo;
 	}
-
+	
 	public String getPostTitle() {
 		return postTitle;
 	}

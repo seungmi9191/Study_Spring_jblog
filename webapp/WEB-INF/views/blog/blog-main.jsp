@@ -21,19 +21,23 @@
 		<div id="wrapper">
 			<div id="content">
 				<div class="blog-content">
-					<h4>화면제목</h4>
-					<p>
-						화면나오는거 적용해야함
-					</p>
-					
-					
+				<%-- <c:forEach items="${listPostContent}" var="listPostContent">
+					<li>
+						<h4>${listPostContent.postTitle}</h4>
+						<p>${listPostContent.postContent}</p>
+					</li>
+				</c:forEach> --%>
+	
 				</div>
 				
 				<ul class="blog-list">
-					<li>
-						<a href="">작업해야함</a> 
-						<span>18/05/04</span>
-					</li>
+						<c:forEach items="${listPost}" var="listPost">
+							<li>
+								<a href="${pageContext.request.contextPath}/${authUser.id}?cateNo=${listPost.postNo}">${listPost.postTitle}</a>
+								<span>${listPost.regDate}</span>
+							</li> 
+							
+						</c:forEach>
 				</ul>
 			</div>
 		</div>
@@ -47,9 +51,9 @@
 		<div id="navigation">
 			<h2>카테고리</h2>
 			<ul>
-				<c:forEach items="${list}" var="cateVo">
-					<li><a href="">${cateVo.cateName}</a></li>
-				</c:forEach>
+				 <c:forEach items="${list}" var="list">
+					<li><a href="${pageContext.request.contextPath}/${authUser.id}?cateNo=${list.cateNo}">${list.cateName}</a></li>
+				</c:forEach> 
 			</ul>
 		</div>
 		
